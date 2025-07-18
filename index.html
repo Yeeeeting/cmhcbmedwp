@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBME推動醫學教育白皮書草案</title>
+    <title>奇美醫院CBME推動醫學教育白皮書草案</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        /* Custom scrollbar for sidebar if needed */
         .sidebar-scroll::-webkit-scrollbar {
             width: 4px;
         }
@@ -31,32 +30,63 @@
         .scroll-mt-24 {
             scroll-margin-top: 6rem; /* 96px */
         }
+        /* Styles for collapsed sidebar */
+        #sidebar.collapsed .sidebar-text,
+        #sidebar.collapsed #outline-chevron {
+            display: none;
+        }
+        #sidebar.collapsed #outline-submenu {
+            display: none !important;
+        }
+        #sidebar.collapsed .nav-link,
+        #sidebar.collapsed #outline-toggle {
+            justify-content: center;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
     <!-- Mobile Menu Toggle Button -->
     <button id="menu-toggle" class="md:hidden fixed top-4 left-4 z-50 bg-white p-2 rounded-md shadow-lg text-gray-700">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="3" y1="12" x2="21" y2="12"></line>
-            <line x1="3" y1="6" x2="21" y2="6"></line>
-            <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
     </button>
 
     <!-- Sidebar Navigation -->
-    <aside id="sidebar" class="w-72 flex-shrink-0 fixed h-full bg-white border-r border-gray-200 p-6 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-40 overflow-y-auto sidebar-scroll">
-        <h3 class="text-xl font-bold text-gray-900 mb-6">章節導覽</h3>
-        <nav>
-            <ul class="space-y-3">
-                <li><a href="#schedule" class="nav-link block px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium">撰寫時程規劃</a></li>
-                <li><a href="#chapter-1" class="nav-link block px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium">第1章｜執行摘要</a></li>
-                <li><a href="#chapter-2" class="nav-link block px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium">第2章｜策略背景</a></li>
-                <li><a href="#chapter-3" class="nav-link block px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium">第3章｜CBME 內涵</a></li>
-                <li><a href="#chapter-4" class="nav-link block px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium">第4章｜推動策略</a></li>
-                <li><a href="#chapter-5" class="nav-link block px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium">第5章｜成效與永續</a></li>
-            </ul>
-        </nav>
+    <aside id="sidebar" class="w-72 flex flex-col fixed h-full bg-white border-r border-gray-200 p-4 transform -translate-x-full md:translate-x-0 transition-all duration-300 ease-in-out z-40">
+        <div class="flex-grow overflow-y-auto sidebar-scroll pr-2">
+            <h3 class="sidebar-text text-xl font-bold text-gray-900 mb-6 px-2">章節導覽</h3>
+            <nav>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="#schedule" class="nav-link flex items-center px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            <span class="sidebar-text ml-3">撰寫時程規劃</span>
+                        </a>
+                    </li>
+                    <li>
+                        <button id="outline-toggle" class="w-full flex justify-between items-center px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium text-left">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                                <span class="sidebar-text ml-3">草案綱要</span>
+                            </div>
+                            <svg id="outline-chevron" class="sidebar-text w-5 h-5 transition-transform duration-200 transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+                        </button>
+                        <ul id="outline-submenu" class="space-y-1 mt-2 pl-8 transition-all duration-300 hidden">
+                            <li><a href="#chapter-1" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-sm">第1章｜執行摘要</a></li>
+                            <li><a href="#chapter-2" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-sm">第2章｜策略背景</a></li>
+                            <li><a href="#chapter-3" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-sm">第3章｜CBME 內涵</a></li>
+                            <li><a href="#chapter-4" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-sm">第4章｜推動策略</a></li>
+                            <li><a href="#chapter-5" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-sm">第5章｜成效與永續</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="pt-4 border-t border-gray-200">
+             <button id="sidebar-toggle" class="hidden md:flex w-full items-center justify-center p-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800">
+                <svg id="sidebar-toggle-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-300"><polyline points="15 18 9 12 15 6"></polyline></svg>
+             </button>
+        </div>
     </aside>
 
     <!-- Overlay for mobile menu -->
@@ -67,7 +97,7 @@
         <div class="p-4 md:p-8">
             <!-- Header -->
             <header class="text-center mb-12">
-                <h1 class="text-3xl md:text-5xl font-bold title-highlight mb-3">CBME推動醫學教育白皮書草案</h1>
+                <h1 class="text-3xl md:text-5xl font-bold title-highlight mb-3">奇美醫院CBME推動醫學教育白皮書草案</h1>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">一項全面的策略框架，旨在培育具備醫學人文素養的次世代智慧醫療人才</p>
             </header>
 
@@ -81,138 +111,35 @@
                     <div class="absolute left-4 sm:left-6 top-1 h-full w-0.5 bg-gray-200"></div>
                     <div class="space-y-8">
                         <!-- Timeline Items -->
-                        <div class="relative flex items-start">
-                            <div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div>
-                            <div class="pl-10 sm:pl-14">
-                                <p class="font-semibold text-gray-800">7/14（週一）至 8/15（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 33 個工作天)</span></p>
-                                <p class="mt-1 font-bold">主要項目：確定綱要</p><p class="text-gray-600">說明：需與外部顧問討論確認（每組找 1 位顧問指導）</p>
-                            </div>
-                        </div>
-                        <div class="relative flex items-start">
-                             <div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div>
-                             <div class="pl-10 sm:pl-14">
-                                 <p class="font-semibold text-gray-800">8/16（週六）至 8/22（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 7 個工作天)</span></p>
-                                 <p class="mt-1 font-bold">主要項目：綱要定稿</p><p class="text-gray-600">說明：完成初步摘要、圖表草稿與主要參考文獻</p>
-                             </div>
-                        </div>
-                        <div class="relative flex items-start">
-                            <div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div>
-                            <div class="pl-10 sm:pl-14">
-                                <p class="font-semibold text-gray-800">8/23（週六）至 9/12（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 21 個工作天)</span></p>
-                                <p class="mt-1 font-bold">主要項目：第一輪統整與審閱</p><p class="text-gray-600">說明：格式統整確認與交叉審閱（由各組負責）</p>
-                            </div>
-                        </div>
-                        <div class="relative flex items-start">
-                            <div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div>
-                            <div class="pl-10 sm:pl-14">
-                                <p class="font-semibold text-gray-800">9/13（週六）至 9/26（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 14 個工作天)</span></p>
-                                <p class="mt-1 font-bold">主要項目：修訂初稿、補充資料</p><p class="text-gray-600">說明：各組依審閱建議修正內容，補充圖表與數據資料</p>
-                            </div>
-                        </div>
-                        <div class="relative flex items-start">
-                            <div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div>
-                            <div class="pl-10 sm:pl-14">
-                                <p class="font-semibold text-gray-800">9/27（週六）至 10/17（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 21 個工作天)</span></p>
-                                <p class="mt-1 font-bold">主要項目：</p>
-                                <ul class="list-disc list-inside text-gray-600 mt-1">
-                                    <li>第二輪審閱與排版設計（定案整體版型，完成初版 HTML／PDF 排版）</li>
-                                    <li>長官審閱（邀請高階主管如院長、副院長等，審閱全書結構與策略主軸）</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="relative flex items-start">
-                            <div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div>
-                            <div class="pl-10 sm:pl-14">
-                                <p class="font-semibold text-gray-800">10/18（週六）至 10/24（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 7 個工作天)</span></p>
-                                <p class="mt-1 font-bold">主要項目：最終內容修訂</p><p class="text-gray-600">說明：僅小幅度內容修訂，原則上不再變動整體結構</p>
-                            </div>
-                        </div>
-                        <div class="relative flex items-start">
-                            <div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div>
-                            <div class="pl-10 sm:pl-14">
-                                <p class="font-semibold text-gray-800">10/25（週六）至 10/31（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 7 個工作天)</span></p>
-                                <p class="mt-1 font-bold">主要項目：定稿草案及出刊</p><p class="text-gray-600">說明：製作完成 HTML 網頁版本、PDF 檔案與印刷版</p>
-                            </div>
-                        </div>
-                        <div class="relative flex items-start">
-                            <div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div>
-                            <div class="pl-10 sm:pl-14">
-                                <p class="font-semibold text-gray-800">11/1（週六）至 11/14（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 14 個工作天)</span></p>
-                                <p class="mt-1 font-bold">主要項目：外部專家與共識營委員審閱</p><p class="text-gray-600">說明：為最終審查與確認</p>
-                            </div>
-                        </div>
+                        <div class="relative flex items-start"><div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div><div class="pl-10 sm:pl-14"><p class="font-semibold text-gray-800">7/14（週一）至 8/15（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 33 個工作天)</span></p><p class="mt-1 font-bold">主要項目：確定綱要</p><p class="text-gray-600">說明：需與外部顧問討論確認（每組找 1 位顧問指導）</p></div></div>
+                        <div class="relative flex items-start"><div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div><div class="pl-10 sm:pl-14"><p class="font-semibold text-gray-800">8/16（週六）至 8/22（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 7 個工作天)</span></p><p class="mt-1 font-bold">主要項目：綱要定稿</p><p class="text-gray-600">說明：完成初步摘要、圖表草稿與主要參考文獻</p></div></div>
+                        <div class="relative flex items-start"><div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div><div class="pl-10 sm:pl-14"><p class="font-semibold text-gray-800">8/23（週六）至 9/12（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 21 個工作天)</span></p><p class="mt-1 font-bold">主要項目：第一輪統整與審閱</p><p class="text-gray-600">說明：格式統整確認與交叉審閱（由各組負責）</p></div></div>
+                        <div class="relative flex items-start"><div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div><div class="pl-10 sm:pl-14"><p class="font-semibold text-gray-800">9/13（週六）至 9/26（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 14 個工作天)</span></p><p class="mt-1 font-bold">主要項目：修訂初稿、補充資料</p><p class="text-gray-600">說明：各組依審閱建議修正內容，補充圖表與數據資料</p></div></div>
+                        <div class="relative flex items-start"><div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div><div class="pl-10 sm:pl-14"><p class="font-semibold text-gray-800">9/27（週六）至 10/17（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 21 個工作天)</span></p><p class="mt-1 font-bold">主要項目：</p><ul class="list-disc list-inside text-gray-600 mt-1"><li>第二輪審閱與排版設計（定案整體版型，完成初版 HTML／PDF 排版）</li><li>長官審閱（邀請高階主管如院長、副院長等，審閱全書結構與策略主軸）</li></ul></div></div>
+                        <div class="relative flex items-start"><div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div><div class="pl-10 sm:pl-14"><p class="font-semibold text-gray-800">10/18（週六）至 10/24（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 7 個工作天)</span></p><p class="mt-1 font-bold">主要項目：最終內容修訂</p><p class="text-gray-600">說明：僅小幅度內容修訂，原則上不再變動整體結構</p></div></div>
+                        <div class="relative flex items-start"><div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div><div class="pl-10 sm:pl-14"><p class="font-semibold text-gray-800">10/25（週六）至 10/31（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 7 個工作天)</span></p><p class="mt-1 font-bold">主要項目：定稿草案及出刊</p><p class="text-gray-600">說明：製作完成 HTML 網頁版本、PDF 檔案與印刷版</p></div></div>
+                        <div class="relative flex items-start"><div class="absolute left-4 sm:left-6 top-1 w-3 h-3 bg-blue-500 rounded-full border-2 border-white ring-4 ring-gray-50"></div><div class="pl-10 sm:pl-14"><p class="font-semibold text-gray-800">11/1（週六）至 11/14（週五）<span class="text-sm font-normal text-gray-500 ml-2">(共 14 個工作天)</span></p><p class="mt-1 font-bold">主要項目：外部專家與共識營委員審閱</p><p class="text-gray-600">說明：為最終審查與確認</p></div></div>
                     </div>
                 </div>
             </div>
 
             <!-- Main Content Flow -->
             <div class="space-y-8">
-                <!-- Chapter 1 -->
+                <!-- Chapters -->
                 <div id="chapter-1" class="scroll-mt-24 bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl">
-                    <div class="flex items-start mb-5">
-                        <div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-                        <div><h2 class="text-2xl font-bold text-gray-900">第1章｜執行摘要</h2><p class="text-md text-gray-500">頂層設計與願景</p></div>
-                    </div>
-                    <ul class="space-y-4 text-gray-700 pl-4 border-l-2 border-blue-200">
-                        <li><strong class="text-gray-800">1.1. 策略意圖：</strong> 定義本院推動次世代臨床人才培育系統轉型的頂層設計與院級標準。</li>
-                        <li><strong class="text-gray-800">1.2. 教學願景：</strong>「培育具醫學人文素養的次世代智慧醫療人才」，由以學員為中心、師資賦能、數據驅動教學成效、全人照護醫療品質三大支柱驅動。</li>
-                        <li><strong class="text-gray-800">1.3. 轉型藍圖縮影：</strong> 透過五年三階段計畫(試點→擴散→優化)，系統性解決教學評量痛點。</li>
-                    </ul>
+                    <div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><div><h2 class="text-2xl font-bold text-gray-900">第1章｜執行摘要</h2><p class="text-md text-gray-500">頂層設計與願景</p></div></div><ul class="space-y-4 text-gray-700 pl-4 border-l-2 border-blue-200"><li><strong class="text-gray-800">1.1. 策略意圖：</strong> 定義本院推動次世代臨床人才培育系統轉型的頂層設計與院級標準。</li><li><strong class="text-gray-800">1.2. 教學願景：</strong>「培育具醫學人文素養的次世代智慧醫療人才」，由以學員為中心、師資賦能、數據驅動教學成效、全人照護醫療品質三大支柱驅動。</li><li><strong class="text-gray-800">1.3. 轉型藍圖縮影：</strong> 透過五年三階段計畫(試點→擴散→優化)，系統性解決教學評量痛點。</li></ul>
                 </div>
-                <!-- Chapter 2 -->
                 <div id="chapter-2" class="scroll-mt-24 bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl">
-                    <div class="flex items-start mb-5">
-                        <div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 6H3"/><path d="M21 12H3"/><path d="M21 18H3"/></svg></div>
-                        <div><h2 class="text-2xl font-bold text-gray-900">第2章｜策略背景與變革必要性</h2><p class="text-md text-gray-500">驅力與現況分析</p></div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div><h3 class="font-semibold text-lg text-gray-800 mb-2">2.1. 外部驅力與內部響應</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>國際標竿趨勢 (ACGME, CanMEDS)</li><li>教學醫院評鑑及臨床醫事人員培訓計畫政策</li><li>院級涵蓋範圍與變革契機</li></ul></div>
-                        <div><h3 class="font-semibold text-lg text-gray-800 mb-2">2.2. 現況評估與缺口分析</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>現行訓練體系數據盤點</li><li>關鍵缺口識別</li></ul></div>
-                    </div>
+                    <div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 6H3"/><path d="M21 12H3"/><path d="M21 18H3"/></svg></div><div><h2 class="text-2xl font-bold text-gray-900">第2章｜策略背景與變革必要性</h2><p class="text-md text-gray-500">驅力與現況分析</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div><h3 class="font-semibold text-lg text-gray-800 mb-2">2.1. 外部驅力與內部響應</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>國際標竿趨勢 (ACGME, CanMEDS)</li><li>教學醫院評鑑及臨床醫事人員培訓計畫政策</li><li>院級涵蓋範圍與變革契機</li></ul></div><div><h3 class="font-semibold text-lg text-gray-800 mb-2">2.2. 現況評估與缺口分析</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>現行訓練體系數據盤點</li><li>關鍵缺口識別</li></ul></div></div>
                 </div>
-                <!-- Chapter 3 -->
                 <div id="chapter-3" class="scroll-mt-24 bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl">
-                    <div class="flex items-start mb-5">
-                        <div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.5A4.5 4.5 0 0 0 18 2c-1.5 0-2.75 1.06-4 1.06C8 3.06 5 11 5 15.5A4.5 4.5 0 0 0 9.5 20c1.25 0 2.5-1.06 4-1.06Z"/><path d="M12 2.06C10.5 2.06 9.25 3.12 8 3.12 5 3.12 2 11.12 2 15.62A4.5 4.5 0 0 0 6.5 20c1.25 0 2.5-1.06 4-1.06"/></svg></div>
-                        <div><h2 class="text-2xl font-bold text-gray-900">第3章｜CBME 內涵</h2><p class="text-md text-gray-500">核心框架與治理</p></div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div><h3 class="font-semibold text-lg text-gray-800 mb-2">3.1. 核心能力與理論框架</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>CBME五大構成要素</li><li>國際標準對接模型(ACGME)</li><li>EPA與Milestone 架構</li></ul></div>
-                        <div><h3 class="font-semibold text-lg text-gray-800 mb-2">3.2. 評量與治理機制</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>全院臨床能力委員會(CCC)組織章程與運作流程</li></ul></div>
-                    </div>
+                    <div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.5A4.5 4.5 0 0 0 18 2c-1.5 0-2.75 1.06-4 1.06C8 3.06 5 11 5 15.5A4.5 4.5 0 0 0 9.5 20c1.25 0 2.5-1.06 4-1.06Z"/><path d="M12 2.06C10.5 2.06 9.25 3.12 8 3.12 5 3.12 2 11.12 2 15.62A4.5 4.5 0 0 0 6.5 20c1.25 0 2.5-1.06 4-1.06"/></svg></div><div><h2 class="text-2xl font-bold text-gray-900">第3章｜CBME 內涵</h2><p class="text-md text-gray-500">核心框架與治理</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div><h3 class="font-semibold text-lg text-gray-800 mb-2">3.1. 核心能力與理論框架</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>CBME五大構成要素</li><li>國際標準對接模型(ACGME)</li><li>EPA與Milestone 架構</li></ul></div><div><h3 class="font-semibold text-lg text-gray-800 mb-2">3.2. 評量與治理機制</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>全院臨床能力委員會(CCC)組織章程與運作流程</li></ul></div></div>
                 </div>
-                <!-- Chapter 4 -->
                 <div id="chapter-4" class="scroll-mt-24 bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl">
-                    <div class="flex items-start mb-5">
-                        <div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
-                        <div><h2 class="text-2xl font-bold text-gray-900">第4章｜推動策略</h2><p class="text-md text-gray-500">執行方法與時程</p></div>
-                    </div>
-                    <div class="space-y-8">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div><h3 class="font-semibold text-lg text-gray-800 mb-2">4.1. 總體推動策略</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>四大策略支柱：以學員為中心、師資賦能、數據驅動教學成效、全人照護醫療品質</li><li>組織權責分工與資源整合</li></ul></div>
-                            <div><h3 class="font-semibold text-lg text-gray-800 mb-2">4.2. 四大核心醫學教育策略</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>全人照護教學</li><li>DECODE數位框架</li><li>醫學人文實踐</li><li>持續品質改善</li></ul></div>
-                        </div>
-                        <div>
-                            <h3 class="font-semibold text-lg text-gray-800 mb-4">4.3. 五年推動時程</h3>
-                            <div class="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4">
-                                <div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200 text-center"><p class="font-bold text-blue-800">階段一 (Y1-2)</p><p class="text-blue-700">試點先行</p></div>
-                                <div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200 text-center"><p class="font-bold text-blue-800">階段二 (Y2-4)</p><p class="text-blue-700">全面擴散</p></div>
-                                <div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200 text-center"><p class="font-bold text-blue-800">階段三 (Y4-5)</p><p class="text-blue-700">文化深化</p></div>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div><div><h2 class="text-2xl font-bold text-gray-900">第4章｜推動策略</h2><p class="text-md text-gray-500">執行方法與時程</p></div></div><div class="space-y-8"><div class="grid grid-cols-1 md:grid-cols-2 gap-8"><div><h3 class="font-semibold text-lg text-gray-800 mb-2">4.1. 總體推動策略</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>四大策略支柱：以學員為中心、師資賦能、數據驅動教學成效、全人照護醫療品質</li><li>組織權責分工與資源整合</li></ul></div><div><h3 class="font-semibold text-lg text-gray-800 mb-2">4.2. 四大核心醫學教育策略</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>全人照護教學</li><li>DECODE數位框架</li><li>醫學人文實踐</li><li>持續品質改善</li></ul></div></div><div><h3 class="font-semibold text-lg text-gray-800 mb-4">4.3. 五年推動時程</h3><div class="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4"><div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200 text-center"><p class="font-bold text-blue-800">階段一 (Y1-2)</p><p class="text-blue-700">試點先行</p></div><div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200 text-center"><p class="font-bold text-blue-800">階段二 (Y2-4)</p><p class="text-blue-700">全面擴散</p></div><div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200 text-center"><p class="font-bold text-blue-800">階段三 (Y4-5)</p><p class="text-blue-700">文化深化</p></div></div></div></div>
                 </div>
-                <!-- Chapter 5 -->
                 <div id="chapter-5" class="scroll-mt-24 bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl">
-                    <div class="flex items-start mb-5">
-                        <div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2Z"/><path d="m15 14-3-3-3 3"/></svg></div>
-                        <div><h2 class="text-2xl font-bold text-gray-900">第5章｜成效衡量與永續發展</h2><p class="text-md text-gray-500">監測、評估與未來展望</p></div>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <div><h3 class="font-semibold text-lg text-gray-800 mb-2">5.1. 監測、評估與回饋</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>關鍵績效指標(KPIs)與成果追蹤</li><li>數據治理與 PDCA決策循環</li></ul></div>
-                        <div><h3 class="font-semibold text-lg text-gray-800 mb-2">5.2. 未來展望與永續</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>系統深化：連結評量結果與獎勵</li><li>數位治理：導入AI預警與決策輔助</li><li>場域擴展：延伸至社區或長照體系</li><li>品牌打造：尋求國際合作與認證</li></ul></div>
-                        <div><h3 class="font-semibold text-lg text-gray-800 mb-2">5.3. 結論：承諾</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>重申願景與策略</li><li>建立跨專業共享心智模式</li><li>院級領導簽署承諾書</li></ul></div>
-                    </div>
+                    <div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2Z"/><path d="m15 14-3-3-3 3"/></svg></div><div><h2 class="text-2xl font-bold text-gray-900">第5章｜成效衡量與永續發展</h2><p class="text-md text-gray-500">監測、評估與未來展望</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><div><h3 class="font-semibold text-lg text-gray-800 mb-2">5.1. 監測、評估與回饋</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>關鍵績效指標(KPIs)與成果追蹤</li><li>數據治理與 PDCA決策循環</li></ul></div><div><h3 class="font-semibold text-lg text-gray-800 mb-2">5.2. 未來展望與永續</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>系統深化：連結評量結果與獎勵</li><li>數位治理：導入AI預警與決策輔助</li><li>場域擴展：延伸至社區或長照體系</li><li>品牌打造：尋求國際合作與認證</li></ul></div><div><h3 class="font-semibold text-lg text-gray-800 mb-2">5.3. 結論：承諾</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>重申願景與策略</li><li>建立跨專業共享心智模式</li><li>院級領導簽署承諾書</li></ul></div></div>
                 </div>
             </div>
         </div>
@@ -224,29 +151,57 @@
             const sidebar = document.getElementById('sidebar');
             const overlay = document.getElementById('overlay');
             const mainContent = document.querySelector('main');
+            const sidebarToggle = document.getElementById('sidebar-toggle');
+            const sidebarToggleIcon = document.getElementById('sidebar-toggle-icon');
 
+            // --- Mobile Menu ---
             function toggleMenu() {
                 sidebar.classList.toggle('-translate-x-full');
                 overlay.classList.toggle('hidden');
             }
+            if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
+            if (overlay) overlay.addEventListener('click', toggleMenu);
 
-            if (menuToggle) {
-                menuToggle.addEventListener('click', toggleMenu);
+            // --- Desktop Sidebar Collapse ---
+            if (sidebarToggle) {
+                sidebarToggle.addEventListener('click', () => {
+                    sidebar.classList.toggle('collapsed');
+                    sidebar.classList.toggle('w-72');
+                    sidebar.classList.toggle('w-20'); // Collapsed width
+                    mainContent.classList.toggle('md:ml-72');
+                    mainContent.classList.toggle('md:ml-20');
+                    sidebarToggleIcon.classList.toggle('rotate-180');
+                    
+                    // Ensure submenu is hidden when collapsing
+                    if (sidebar.classList.contains('collapsed')) {
+                        outlineSubmenu.classList.add('hidden');
+                        outlineChevron.classList.remove('rotate-180');
+                    }
+                });
             }
-            if (overlay) {
-                overlay.addEventListener('click', toggleMenu);
+
+            // --- Sidebar Submenu ---
+            const outlineToggle = document.getElementById('outline-toggle');
+            const outlineSubmenu = document.getElementById('outline-submenu');
+            const outlineChevron = document.getElementById('outline-chevron');
+
+            if (outlineToggle) {
+                outlineToggle.addEventListener('click', () => {
+                    // Do not toggle if sidebar is collapsed
+                    if (sidebar.classList.contains('collapsed')) return;
+                    
+                    outlineSubmenu.classList.toggle('hidden');
+                    outlineChevron.classList.toggle('rotate-180');
+                });
             }
 
             // --- Smooth scrolling & Active Link Highlighting ---
             const navLinks = document.querySelectorAll('.nav-link');
             const sections = document.querySelectorAll('div[id^="chapter-"], div[id="schedule"]');
 
-            // Close mobile menu on link click
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    if (window.innerWidth < 768) { // md breakpoint
-                        toggleMenu();
-                    }
+                    if (window.innerWidth < 768) toggleMenu();
                 });
             });
 
@@ -254,25 +209,30 @@
             
             const observerOptions = {
                 root: null,
-                rootMargin: '0px 0px -50% 0px', // Trigger when the top of the section is in the middle of the screen
+                rootMargin: '0px 0px -50% 0px',
                 threshold: 0
             };
 
-            const observer = new IntersectionObserver((entries, observer) => {
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     const navLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
                     if (entry.isIntersecting) {
                         navLinks.forEach(link => link.classList.remove(...activeClass));
-                        if(navLink) {
-                           navLink.classList.add(...activeClass);
+                        if(navLink) navLink.classList.add(...activeClass);
+
+                        // Auto-open submenu if a chapter is active
+                        const parentSubmenu = navLink?.closest('ul');
+                        if (parentSubmenu && parentSubmenu.id === 'outline-submenu') {
+                            if (parentSubmenu.classList.contains('hidden')) {
+                                parentSubmenu.classList.remove('hidden');
+                                outlineChevron.classList.add('rotate-180');
+                            }
                         }
                     }
                 });
             }, observerOptions);
 
-            sections.forEach(section => {
-                observer.observe(section);
-            });
+            sections.forEach(section => observer.observe(section));
         });
     </script>
 </body>
