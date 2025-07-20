@@ -54,23 +54,23 @@
     <!-- Sidebar Navigation -->
     <aside id="sidebar" class="w-72 flex flex-col fixed h-full bg-white border-r border-gray-200 p-4 transform -translate-x-full md:translate-x-0 transition-all duration-300 ease-in-out z-40">
         <div class="flex-grow overflow-y-auto sidebar-scroll pr-2">
-            <h3 class="sidebar-text text-xl font-bold text-gray-900 mb-6 px-2">章節導覽</h3>
+            <h3 class="sidebar-text text-2xl font-bold text-gray-900 mb-6 px-2">章節導覽</h3>
             <nav>
                 <ul class="space-y-2">
                     <li>
-                        <a href="#progress-report" class="nav-link flex items-center px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium">
+                        <a href="#progress-report" class="nav-link flex items-center px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium text-base">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
                             <span class="sidebar-text ml-3">白皮書撰寫進度</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#schedule" class="nav-link flex items-center px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium">
+                        <a href="#schedule" class="nav-link flex items-center px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium text-base">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                             <span class="sidebar-text ml-3">撰寫時程規劃</span>
                         </a>
                     </li>
                     <li>
-                        <button id="outline-toggle" class="w-full flex justify-between items-center px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium text-left">
+                        <button id="outline-toggle" class="w-full flex justify-between items-center px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium text-left text-base">
                             <div class="flex items-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
                                 <span class="sidebar-text ml-3">草案綱要</span>
@@ -78,16 +78,16 @@
                             <svg id="outline-chevron" class="sidebar-text w-5 h-5 transition-transform duration-200 transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
                         </button>
                         <ul id="outline-submenu" class="space-y-1 mt-2 pl-8 transition-all duration-300 hidden">
-                            <li><a href="#chapter-1" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-sm">第1章｜執行摘要</a></li>
-                            <li><a href="#chapter-2" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-sm">第2章｜策略背景</a></li>
-                            <li><a href="#chapter-3" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-sm">第3章｜CBME 內涵</a></li>
-                            <li><a href="#chapter-4" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-sm">第4章｜推動策略</a></li>
-                            <li><a href="#decode-framework" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-sm">4.2.2 DECODE 詳解</a></li>
-                            <li><a href="#chapter-5" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-sm">第5章｜成效與永續</a></li>
+                            <li><a href="#chapter-1" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-base">第1章｜執行摘要</a></li>
+                            <li><a href="#chapter-2" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-base">第2章｜策略背景</a></li>
+                            <li><a href="#chapter-3" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-base">第3章｜CBME 內涵</a></li>
+                            <li><a href="#chapter-4" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-base">第4章｜推動策略</a></li>
+                            <li><a href="#decode-framework" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-base">4.2.2 DECODE 詳解</a></li>
+                            <li><a href="#chapter-5" class="nav-link block px-4 py-2 rounded-lg text-gray-500 hover:bg-gray-100 hover:text-gray-800 text-base">第5章｜成效與永續</a></li>
                         </ul>
                     </li>
                      <li>
-                        <a href="#status" class="nav-link flex items-center px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium">
+                        <a href="#status" class="nav-link flex items-center px-4 py-2 rounded-lg text-gray-600 hover:bg-gray-100 font-medium text-base">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0"><path d="M12 20v-6M12 14V4M6 20v-2M6 18V4M18 20v-4M18 16V4"/></svg>
                             <span class="sidebar-text ml-3">本院執行現況</span>
                         </a>
@@ -107,18 +107,18 @@
 
     <!-- Main Content -->
     <main class="md:ml-72 transition-all duration-300 ease-in-out">
-        <div class="p-4 md:p-8">
+        <div class="p-4 md:p-8 text-lg">
             <!-- Header -->
             <header class="text-center mb-12">
-                <h1 class="text-3xl md:text-5xl font-bold title-highlight mb-3">奇美醫院CBME推動醫學教育白皮書草案</h1>
+                <h1 class="text-4xl md:text-6xl font-bold title-highlight mb-3">奇美醫院CBME推動醫學教育白皮書草案</h1>
             </header>
 
             <!-- Progress Report -->
             <div id="progress-report" class="scroll-mt-24 bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl mb-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-6">一、白皮書撰寫進度</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">一、白皮書撰寫進度</h2>
                 <div class="space-y-6">
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mb-2">(一) 會議重點與討論內容</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mb-2">(一) 會議重點與討論內容</h3>
                         <ul class="list-disc list-inside text-gray-700 ml-4 space-y-1">
                             <li>確認白皮書綱要架構。</li>
                             <li>明確各章節邏輯順序與資料蒐集方向。</li>
@@ -127,7 +127,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mb-2">(二) 撰寫時程規劃</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mb-2">(二) 撰寫時程規劃</h3>
                         <ul class="list-disc list-inside text-gray-700 ml-4 space-y-1">
                            <li>本團隊已擬定完整之白皮書草案撰寫進度，涵蓋構思、草擬、審閱、修訂與出刊等階段。</li>
                            <li>全案預計於11月中旬前完成第一版出刊。</li>
@@ -135,7 +135,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mb-2">(三) 顧問諮詢安排</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mb-2">(三) 顧問諮詢安排</h3>
                         <p class="text-gray-700 ml-4">114年度預計進行二次外部顧問諮詢會議：</p>
                         <ul class="list-disc list-inside text-gray-700 ml-8 mt-2 space-y-1">
                             <li><strong>第一次諮詢：</strong>進行中，主要聚焦於綱要方向確認。</li>
@@ -143,7 +143,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mb-2">(四) 團隊組成與任務分工</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mb-2">(四) 團隊組成與任務分工</h3>
                         <ul class="list-disc list-inside text-gray-700 ml-4 space-y-1">
                             <li>目前正逢人事異動階段，各任務小組編組尚在調整中。</li>
                             <li>預計於8月完成醫學教育相關任務小組之確認，屆時將釐清各成員專責項目，並完成分工對應。</li>
@@ -156,12 +156,12 @@
             <!-- White Paper Schedule -->
             <div id="schedule" class="scroll-mt-24 bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl mb-8">
                 <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-6">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-2 sm:mb-0">二、白皮書撰寫時程規劃</h2>
-                    <span class="text-sm text-gray-500 flex-shrink-0">更新日期：114/07/14</span>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2 sm:mb-0">二、白皮書撰寫時程規劃</h2>
+                    <span class="text-base text-gray-500 flex-shrink-0">更新日期：114/07/14</span>
                 </div>
                 <div class="overflow-x-auto">
-                    <table class="w-full text-sm text-left text-gray-600">
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                    <table class="w-full text-base text-left text-gray-600">
+                        <thead class="text-base text-gray-700 uppercase bg-gray-100">
                             <tr>
                                 <th scope="col" class="px-6 py-3">日期起</th>
                                 <th scope="col" class="px-6 py-3">日期迄</th>
@@ -186,21 +186,21 @@
 
             <!-- Outline -->
             <div id="outline" class="scroll-mt-24 bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl mb-8">
-                 <h2 class="text-2xl font-bold text-gray-900 mb-6">三、草案綱要</h2>
+                 <h2 class="text-3xl font-bold text-gray-900 mb-6">三、草案綱要</h2>
                  <div class="space-y-8">
-                    <div id="chapter-1"><div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><div><h2 class="text-2xl font-bold text-gray-900">第1章｜執行摘要</h2><p class="text-md text-gray-500">頂層設計與願景</p></div></div><ul class="space-y-4 text-gray-700 pl-4 border-l-2 border-blue-200"><li><strong class="text-gray-800">1.1. 策略意圖：</strong>定義本院推動次世代臨床人才培育系統轉型的頂層設計與院級標準。</li><li><strong class="text-gray-800">1.2. 教學願景：</strong>「培育具醫學人文素養的次世代智慧醫療人才」，由以學員為中心、師資賦能、數據驅動教學成效、全人照護醫療品質四大支柱驅動。</li><li><strong class="text-gray-800">1.3. 轉型藍圖縮影：</strong>透過五年三階段計畫(試點→擴散→優化)，系統性解決教學評量痛點。</li></ul></div>
-                    <div id="chapter-2"><div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 6H3"/><path d="M21 12H3"/><path d="M21 18H3"/></svg></div><div><h2 class="text-2xl font-bold text-gray-900">第2章｜策略背景與變革必要性</h2><p class="text-md text-gray-500">驅力與現況分析</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div><h3 class="font-semibold text-lg text-gray-800 mb-2">2.1. 外部驅力與內部響應</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>國際標竿趨勢 (ACGME, CanMEDS)</li><li>教學醫院評鑑及臨床醫事人員培訓計畫政策</li><li>院級涵蓋範圍與變革契機</li></ul></div><div><h3 class="font-semibold text-lg text-gray-800 mb-2">2.2. 現況評估與缺口分析</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>現行訓練體系數據盤點</li><li>關鍵缺口識別</li></ul></div></div></div>
-                    <div id="chapter-3"><div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.5A4.5 4.5 0 0 0 18 2c-1.5 0-2.75 1.06-4 1.06C8 3.06 5 11 5 15.5A4.5 4.5 0 0 0 9.5 20c1.25 0 2.5-1.06 4-1.06Z"/><path d="M12 2.06C10.5 2.06 9.25 3.12 8 3.12 5 3.12 2 11.12 2 15.62A4.5 4.5 0 0 0 6.5 20c1.25 0 2.5-1.06 4-1.06"/></svg></div><div><h2 class="text-2xl font-bold text-gray-900">第3章｜CBME 內涵</h2><p class="text-md text-gray-500">核心框架與治理</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div><h3 class="font-semibold text-lg text-gray-800 mb-2">3.1. 核心能力與理論框架</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>CBME五大構成要素</li><li>國際標準對接模型(ACGME)</li><li>EPA與Milestone架構</li></ul></div><div><h3 class="font-semibold text-lg text-gray-800 mb-2">3.2. 評量與治理機制</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>全院臨床能力委員會(CCC)組織章程與運作流程</li></ul></div></div></div>
-                    <div id="chapter-4"><div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div><div><h2 class="text-2xl font-bold text-gray-900">第4章｜推動策略</h2><p class="text-md text-gray-500">執行方法與時程</p></div></div><div class="space-y-8"><div class="grid grid-cols-1 md:grid-cols-2 gap-8"><div><h3 class="font-semibold text-lg text-gray-800 mb-2">4.1. 總體推動策略</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>四大策略支柱：以學員為中心、師資賦能、數據驅動教學成效、全人照護醫療品質</li><li>組織權責分工與資源整合</li></ul></div><div><h3 class="font-semibold text-lg text-gray-800 mb-2">4.2. 四大核心醫學教育策略</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>全人照護教學</li><li><button id="decode-toggle-button" class="text-blue-600 hover:underline flex items-center p-0 text-left font-normal"><span>DECODE數位框架</span><svg id="decode-chevron" class="w-5 h-5 transition-transform duration-200 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button></li><li>醫學人文實踐</li><li>持續品質改善</li></ul></div></div><div><h3 class="font-semibold text-lg text-gray-800 mb-4">4.3. 五年推動</h3><div class="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4"><div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200 text-center"><p class="font-bold text-blue-800">階段一 (Y1-2):試點先行</p></div><div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200 text-center"><p class="font-bold text-blue-800">階段二 (Y2-4):全面擴散</p></div><div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200 text-center"><p class="font-bold text-blue-800">階段三 (Y4-5):文化深化</p></div></div></div></div></div>
-                    <div id="chapter-5"><div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2Z"/><path d="m15 14-3-3-3 3"/></svg></div><div><h2 class="text-2xl font-bold text-gray-900">第5章｜成效衡量與永續發展</h2><p class="text-md text-gray-500">監測、評估與未來展望</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><div><h3 class="font-semibold text-lg text-gray-800 mb-2">5.1. 監測、評估與回饋機制</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>關鍵績效指標(KPIs)與成果追蹤(結構、過程、結果面如領先指標)</li><li>數據治理與 PDCA決策循環</li></ul></div><div><h3 class="font-semibold text-lg text-gray-800 mb-2">5.2. 未來展望與永續經營</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>系統深化：連結評量結果與獎勵制度</li><li>數位治理：導入AI預警與決策輔助</li><li>場域擴展：延伸至社區或長照體系</li><li>品牌打造：尋求國際合作與認證</li></ul></div><div><h3 class="font-semibold text-lg text-gray-800 mb-2">5.3. 結論：承諾</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>重申願景與策略</li><li>建立跨專業共享心智模式</li><li>院級領導簽署承諾書</li></ul></div></div></div>
+                    <div id="chapter-1"><div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><div><h2 class="text-3xl font-bold text-gray-900">第1章｜執行摘要</h2><p class="text-lg text-gray-500">頂層設計與願景</p></div></div><ul class="space-y-4 text-gray-700 pl-4 border-l-2 border-blue-200"><li><strong class="text-gray-800">1.1. 策略意圖：</strong>定義本院推動次世代臨床人才培育系統轉型的頂層設計與院級標準。</li><li><strong class="text-gray-800">1.2. 教學願景：</strong>「培育具醫學人文素養的次世代智慧醫療人才」，由以學員為中心、師資賦能、數據驅動教學成效、全人照護醫療品質四大支柱驅動。</li><li><strong class="text-gray-800">1.3. 轉型藍圖縮影：</strong>透過五年三階段計畫(試點→擴散→優化)，系統性解決教學評量痛點。</li></ul></div>
+                    <div id="chapter-2"><div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 6H3"/><path d="M21 12H3"/><path d="M21 18H3"/></svg></div><div><h2 class="text-3xl font-bold text-gray-900">第2章｜策略背景與變革必要性</h2><p class="text-lg text-gray-500">驅力與現況分析</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div><h3 class="text-xl font-semibold text-gray-800 mb-2">2.1. 外部驅力與內部響應</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>國際標竿趨勢 (ACGME, CanMEDS)</li><li>教學醫院評鑑及臨床醫事人員培訓計畫政策</li><li>院級涵蓋範圍與變革契機</li></ul></div><div><h3 class="text-xl font-semibold text-gray-800 mb-2">2.2. 現況評估與缺口分析</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>現行訓練體系數據盤點</li><li>關鍵缺口識別</li></ul></div></div></div>
+                    <div id="chapter-3"><div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.5A4.5 4.5 0 0 0 18 2c-1.5 0-2.75 1.06-4 1.06C8 3.06 5 11 5 15.5A4.5 4.5 0 0 0 9.5 20c1.25 0 2.5-1.06 4-1.06Z"/><path d="M12 2.06C10.5 2.06 9.25 3.12 8 3.12 5 3.12 2 11.12 2 15.62A4.5 4.5 0 0 0 6.5 20c1.25 0 2.5-1.06 4-1.06"/></svg></div><div><h2 class="text-3xl font-bold text-gray-900">第3章｜CBME 內涵</h2><p class="text-lg text-gray-500">核心框架與治理</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div><h3 class="text-xl font-semibold text-gray-800 mb-2">3.1. 核心能力與理論框架</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>CBME五大構成要素</li><li>國際標準對接模型(ACGME)</li><li>EPA與Milestone架構</li></ul></div><div><h3 class="text-xl font-semibold text-gray-800 mb-2">3.2. 評量與治理機制</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>全院臨床能力委員會(CCC)組織章程與運作流程</li></ul></div></div></div>
+                    <div id="chapter-4"><div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div><div><h2 class="text-3xl font-bold text-gray-900">第4章｜推動策略</h2><p class="text-lg text-gray-500">執行方法與時程</p></div></div><div class="space-y-8"><div class="grid grid-cols-1 md:grid-cols-2 gap-8"><div><h3 class="text-xl font-semibold text-gray-800 mb-2">4.1. 總體推動策略</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>四大策略支柱：以學員為中心、師資賦能、數據驅動教學成效、全人照護醫療品質</li><li>組織權責分工與資源整合</li></ul></div><div><h3 class="text-xl font-semibold text-gray-800 mb-2">4.2. 四大核心醫學教育策略</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>全人照護教學</li><li><button id="decode-toggle-button" class="text-blue-600 hover:underline flex items-center p-0 text-left font-normal"><span>DECODE數位框架</span><svg id="decode-chevron" class="w-5 h-5 transition-transform duration-200 ml-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button></li><li>醫學人文實踐</li><li>持續品質改善</li></ul></div></div><div><h3 class="text-xl font-semibold text-gray-800 mb-4">4.3. 五年推動</h3><div class="flex flex-col md:flex-row justify-between space-y-4 md:space-y-0 md:space-x-4"><div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200 text-center"><p class="font-bold text-blue-800">階段一 (Y1-2):試點先行</p></div><div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200 text-center"><p class="font-bold text-blue-800">階段二 (Y2-4):全面擴散</p></div><div class="flex-1 bg-blue-50 p-4 rounded-lg border border-blue-200 text-center"><p class="font-bold text-blue-800">階段三 (Y4-5):文化深化</p></div></div></div></div></div>
+                    <div id="chapter-5"><div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2Z"/><path d="m15 14-3-3-3 3"/></svg></div><div><h2 class="text-3xl font-bold text-gray-900">第5章｜成效衡量與永續發展</h2><p class="text-lg text-gray-500">監測、評估與未來展望</p></div></div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><div><h3 class="text-xl font-semibold text-gray-800 mb-2">5.1. 監測、評估與回饋機制</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>關鍵績效指標(KPIs)與成果追蹤(結構、過程、結果面如領先指標)</li><li>數據治理與 PDCA決策循環</li></ul></div><div><h3 class="text-xl font-semibold text-gray-800 mb-2">5.2. 未來展望與永續經營</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>系統深化：連結評量結果與獎勵制度</li><li>數位治理：導入AI預警與決策輔助</li><li>場域擴展：延伸至社區或長照體系</li><li>品牌打造：尋求國際合作與認證</li></ul></div><div><h3 class="text-xl font-semibold text-gray-800 mb-2">5.3. 結論：承諾</h3><ul class="list-disc list-inside space-y-2 text-gray-600"><li>重申願景與策略</li><li>建立跨專業共享心智模式</li><li>院級領導簽署承諾書</li></ul></div></div></div>
                  </div>
             </div>
             
-            <div id="decode-framework" class="scroll-mt-24 bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl mb-8 hidden"><div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg></div><div><h2 class="text-2xl font-bold text-gray-900">DECODE數位框架深度解析</h2><p class="text-md text-gray-500">戰略定位、開發淵源與專家基礎</p></div></div><div class="space-y-6 text-gray-700"> <p class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg"><b>核心結論：</b>DECODE框架是引導醫學教育數位轉型的最佳核心架構，但最佳策略是將其與CBME、DHEF等概念整合，形成一個多層次的教育生態系統。</p><div class="pt-4"><h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">第一部分：戰略定位分析</h3><div class="space-y-6"><div><h4 class="font-bold text-lg mb-2">1.2 框架結構與核心優勢</h4><div class="grid grid-cols-1 md:grid-cols-2 gap-4"> <div class="bg-gray-50 p-4 rounded-lg"><b>數位健康專業素養</b></div> <div class="bg-gray-50 p-4 rounded-lg"><b>病患與群體數位健康</b></div> <div class="bg-gray-50 p-4 rounded-lg"><b>健康資訊系統</b></div> <div class="bg-gray-50 p-4 rounded-lg"><b>健康數據科學</b></div></div></div><div><h4 class="font-bold text-lg mb-2">1.3 整合策略：多層次教育生態系統</h4><div class="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center"><div class="flex flex-col items-center space-y-4"><div class="bg-sky-100 text-sky-800 font-bold p-3 rounded-lg w-full max-w-md">頂層指導原則：能力導向醫學教育 (CBME)</div><div class="text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg></div><div class="relative bg-blue-100 text-blue-800 font-bold p-4 rounded-lg w-full max-w-lg"><div class="absolute -left-28 top-1/2 -translate-y-1/2 bg-teal-100 text-teal-800 p-2 rounded-lg text-sm w-24">價值觀與倫理：<br>DHEF 公平性</div><p>核心內容架構：DECODE 框架</p></div><div class="text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg></div><div class="bg-indigo-100 text-indigo-800 font-bold p-3 rounded-lg w-full max-w-md">特定領域深化：AAMC 遠距醫療能力</div></div></div></div></div></div><div class="pt-4"><h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">第二部分：開發淵源與流程</h3><div class="relative pl-8"><div class="absolute left-3 top-2 bottom-2 w-0.5 bg-gray-200"></div><div class="relative mb-6"><div class="absolute -left-5 w-6 h-6 bg-blue-500 rounded-full text-white flex items-center justify-center font-bold">1</div><h4 class="font-bold">系統性文獻回顧</h4><p class="text-sm">從上萬篇文獻中萃取潛在能力，草擬初始框架。</p></div><div class="relative mb-6"><div class="absolute -left-5 w-6 h-6 bg-blue-500 rounded-full text-white flex items-center justify-center font-bold">2</div><h4 class="font-bold">建立全球專家小組</h4><p class="text-sm">招募來自79個國家的211位跨領域專家。</p></div><div class="relative mb-6"><div class="absolute -left-5 w-6 h-6 bg-blue-500 rounded-full text-white flex items-center justify-center font-bold">3</div><h4 class="font-bold">多輪匿名問卷調查</h4><p class="text-sm">透過德爾菲法，反覆評分與回饋，直至達成共識。</p></div><div class="relative"><div class="absolute -left-5 w-6 h-6 bg-blue-500 rounded-full text-white flex items-center justify-center font-bold">4</div><h4 class="font-bold">最終框架確立與發表</h4><p class="text-sm">發表於JAMA Network Open，確保其全球公信力。</p></div></div></div><div class="pt-4"><h3 class="text-xl font-semibold text-gray-800 mb-4 border-b pb-2">第三部分：專家基礎與可信度</h3><div class="grid md:grid-cols-3 gap-4 text-center"> <div class="bg-gray-50 p-4 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9m-9 9a9 9 0 00-9-9"/></svg><h4 class="font-bold">全球代表性</h4><p class="text-2xl font-bold">79</p><p>國家</p></div> <div class="bg-gray-50 p-4 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.125-1.274-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.125-1.274.356-1.857m0 0a3.001 3.001 0 015.644 0M12 12a3 3 0 100-6 3 3 0 000 6z"/></svg><h4 class="font-bold">跨領域專業</h4><p class="text-2xl font-bold">211</p><p>位專家</p></div> <div class="bg-gray-50 p-4 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><h4 class="font-bold">科學化共識</h4><p>德爾菲法</p><p>確保客觀</p></div></div></div></div></div>
+            <div id="decode-framework" class="scroll-mt-24 bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl mb-8 hidden"><div class="flex items-start mb-5"><div class="bg-blue-100 text-blue-600 rounded-lg p-3 mr-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg></div><div><h2 class="text-3xl font-bold text-gray-900">DECODE數位框架深度解析</h2><p class="text-lg text-gray-500">戰略定位、開發淵源與專家基礎</p></div></div><div class="space-y-6 text-gray-700"> <p class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg"><b>核心結論：</b>DECODE框架是引導醫學教育數位轉型的最佳核心架構，但最佳策略是將其與CBME、DHEF等概念整合，形成一個多層次的教育生態系統。</p><div class="pt-4"><h3 class="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">第一部分：戰略定位分析</h3><div class="space-y-6"><div><h4 class="font-bold text-xl mb-2">1.2 框架結構與核心優勢</h4><div class="grid grid-cols-1 md:grid-cols-2 gap-4"> <div class="bg-gray-50 p-4 rounded-lg"><b>數位健康專業素養</b></div> <div class="bg-gray-50 p-4 rounded-lg"><b>病患與群體數位健康</b></div> <div class="bg-gray-50 p-4 rounded-lg"><b>健康資訊系統</b></div> <div class="bg-gray-50 p-4 rounded-lg"><b>健康數據科學</b></div></div></div><div><h4 class="font-bold text-xl mb-2">1.3 整合策略：多層次教育生態系統</h4><div class="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center"><div class="flex flex-col items-center space-y-4"><div class="bg-sky-100 text-sky-800 font-bold p-3 rounded-lg w-full max-w-md">頂層指導原則：能力導向醫學教育 (CBME)</div><div class="text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg></div><div class="relative bg-blue-100 text-blue-800 font-bold p-4 rounded-lg w-full max-w-lg"><div class="absolute -left-28 top-1/2 -translate-y-1/2 bg-teal-100 text-teal-800 p-2 rounded-lg text-base w-24">價值觀與倫理：<br>DHEF 公平性</div><p>核心內容架構：DECODE 框架</p></div><div class="text-gray-400"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg></div><div class="bg-indigo-100 text-indigo-800 font-bold p-3 rounded-lg w-full max-w-md">特定領域深化：AAMC 遠距醫療能力</div></div></div></div></div></div><div class="pt-4"><h3 class="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">第二部分：開發淵源與流程</h3><div class="relative pl-8"><div class="absolute left-3 top-2 bottom-2 w-0.5 bg-gray-200"></div><div class="relative mb-6"><div class="absolute -left-5 w-6 h-6 bg-blue-500 rounded-full text-white flex items-center justify-center font-bold">1</div><h4 class="font-bold text-lg">系統性文獻回顧</h4><p class="text-base">從上萬篇文獻中萃取潛在能力，草擬初始框架。</p></div><div class="relative mb-6"><div class="absolute -left-5 w-6 h-6 bg-blue-500 rounded-full text-white flex items-center justify-center font-bold">2</div><h4 class="font-bold text-lg">建立全球專家小組</h4><p class="text-base">招募來自79個國家的211位跨領域專家。</p></div><div class="relative mb-6"><div class="absolute -left-5 w-6 h-6 bg-blue-500 rounded-full text-white flex items-center justify-center font-bold">3</div><h4 class="font-bold text-lg">多輪匿名問卷調查</h4><p class="text-base">透過德爾菲法，反覆評分與回饋，直至達成共識。</p></div><div class="relative"><div class="absolute -left-5 w-6 h-6 bg-blue-500 rounded-full text-white flex items-center justify-center font-bold">4</div><h4 class="font-bold text-lg">最終框架確立與發表</h4><p class="text-base">發表於JAMA Network Open，確保其全球公信力。</p></div></div></div><div class="pt-4"><h3 class="text-2xl font-semibold text-gray-800 mb-4 border-b pb-2">第三部分：專家基礎與可信度</h3><div class="grid md:grid-cols-3 gap-4 text-center"> <div class="bg-gray-50 p-4 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9V3m0 18a9 9 0 009-9m-9 9a9 9 0 00-9-9"/></svg><h4 class="font-bold text-xl">全球代表性</h4><p class="text-3xl font-bold">79</p><p>國家</p></div> <div class="bg-gray-50 p-4 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.653-.125-1.274-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.653.125-1.274.356-1.857m0 0a3.001 3.001 0 015.644 0M12 12a3 3 0 100-6 3 3 0 000 6z"/></svg><h4 class="font-bold text-xl">跨領域專業</h4><p class="text-3xl font-bold">211</p><p>位專家</p></div> <div class="bg-gray-50 p-4 rounded-lg"><svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-500 mx-auto mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><h4 class="font-bold text-xl">科學化共識</h4><p>德爾菲法</p><p>確保客觀</p></div></div></div></div></div>
 
             <!-- Current Status -->
             <div id="status" class="scroll-mt-24 bg-white rounded-xl shadow-lg p-6 md:p-8 transition-all duration-300 hover:shadow-xl mb-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-6">四、本院執行現況</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">四、本院執行現況</h2>
                 <!-- Summary Text -->
                 <div class="bg-gray-100 p-4 rounded-lg mb-8 text-gray-700">
                     <p>本院推動能力導向醫學教育(CBME)的現況呈現跨職別差異，醫事職類進展較快，已有超過90%的職類導入Milestone或EPA評量工具，相較之下，醫師科部的CCC制度建立則約半數科部完成建置，其餘尚在規劃或導入階段，此現況反映出不同職別的推動進程與挑戰，需納入後續策略規劃考量。</p>
@@ -209,10 +209,10 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     <!-- Physician Progress -->
                     <div class="bg-gray-50 p-6 rounded-lg">
-                        <h4 class="text-lg font-semibold text-gray-800 mb-2">醫師 CCC 制度建立進展</h4>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">醫師 CCC 制度建立進展</h4>
                         <div class="flex items-center justify-between mb-1">
-                            <span class="text-base font-medium text-blue-700">已建立科部</span>
-                            <span class="text-sm font-medium text-blue-700">13 / 24 (54%)</span>
+                            <span class="text-lg font-medium text-blue-700">已建立科部</span>
+                            <span class="text-base font-medium text-blue-700">13 / 24 (54%)</span>
                         </div>
                         <div class="w-full bg-gray-200 rounded-full h-2.5">
                             <div class="bg-blue-600 h-2.5 rounded-full" style="width: 54%"></div>
@@ -220,10 +220,10 @@
                     </div>
                     <!-- Allied Health Progress -->
                     <div class="bg-gray-50 p-6 rounded-lg">
-                        <h4 class="text-lg font-semibold text-gray-800 mb-2">醫事職類 Milestone/EPA 導入進展</h4>
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">醫事職類 Milestone/EPA 導入進展</h4>
                         <div class="flex items-center justify-between mb-1">
-                            <span class="text-base font-medium text-teal-700">已導入職類</span>
-                            <span class="text-sm font-medium text-teal-700">10 / 11 (91%)</span>
+                            <span class="text-lg font-medium text-teal-700">已導入職類</span>
+                            <span class="text-base font-medium text-teal-700">10 / 11 (91%)</span>
                         </div>
                         <div class="w-full bg-gray-200 rounded-full h-2.5">
                             <div class="bg-teal-500 h-2.5 rounded-full" style="width: 91%"></div>
@@ -233,11 +233,11 @@
 
                 <div class="space-y-8">
                     <div>
-                        <h3 class="text-lg font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mb-4">(一) 醫師</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mb-4">(一) 醫師</h3>
                         <p class="mb-4 text-gray-700">CCC制度已建立科部：13科部 / 未建立科部：10科部 / 無規劃建立科部：1科部。</p>
                         <div class="overflow-x-auto">
-                            <table class="w-full text-sm text-left text-gray-600">
-                                <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                            <table class="w-full text-base text-left text-gray-600">
+                                <thead class="text-base text-gray-700 uppercase bg-gray-100">
                                     <tr>
                                         <th class="px-4 py-3">科部</th><th class="px-4 py-3">CCC制度建立(有)</th><th class="px-4 py-3">CCC制度建立(無)</th><th class="px-4 py-3">施行辦法</th><th class="px-4 py-3">CCC評核月</th>
                                     </tr>
@@ -272,10 +272,10 @@
                         </div>
                     </div>
                      <div>
-                        <h3 class="text-lg font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mb-4">(二) 醫事職類之整體概況</h3>
+                        <h3 class="text-xl font-semibold text-gray-800 border-l-4 border-blue-500 pl-3 mb-4">(二) 醫事職類之整體概況</h3>
                         <div class="overflow-x-auto">
-                            <table class="w-full text-sm text-left text-gray-600">
-                                <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                            <table class="w-full text-base text-left text-gray-600">
+                                <thead class="text-base text-gray-700 uppercase bg-gray-100">
                                     <tr>
                                         <th class="px-4 py-3">醫事職類</th><th class="px-4 py-3">Milestone或EPA導入並應用</th><th class="px-4 py-3">學會/全聯會公版建置</th><th class="px-4 py-3">CCC委員會成立並運行</th><th class="px-4 py-3">備註</th>
                                     </tr>
